@@ -1,0 +1,15 @@
+@import url('fontiran.css');
+@import url('style.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary-color: #1ABC9C;
+    --secondary-color: #FFCD70;
+    --accent-color: #43B6E6;
+    --background-color: #f4f4f4;
+    --text-color: #48484b;
+    --icon-color : #aeaeae;
+    --text-background : '#ADFCED'
+  }
