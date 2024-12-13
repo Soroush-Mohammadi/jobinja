@@ -6,7 +6,7 @@
       :numScroll="1"
       :responsiveOptions="responsiveOptions"
       circular
-      autoplayInterval="3000"
+      :autoplayInterval="3000"
     >
       <template #previcon>
         <div v-if="display">
@@ -89,7 +89,7 @@ const responsiveOptions = ref([
 ]);
 
 // Reactive screen size handling
-const displaySize = ref(window.innerWidth);
+const displaySize = ref(typeof window !== "undefined" ? window.innerWidth : 0);
 
 const display = computed(() => displaySize.value > 767);
 
@@ -99,6 +99,7 @@ onMounted(() => {
   };
 
   window.addEventListener("resize", updateSize);
+  updateSize(); // Ensure we set the initial value when mounted.
 
   onBeforeUnmount(() => {
     window.removeEventListener("resize", updateSize);
