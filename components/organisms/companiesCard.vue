@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row overflow-x md:flex justify-start gap-x-10 md:justify-start lg:justify-center">
+  <div class="overflow-x-hidden flex flex-row overflow-x md:flex justify-start gap-x-10 md:justify-start lg:justify-center">
     <div v-for="comp in companies.slice(0,3)" :key="comp" class="border border-gray-300 rounded-md min-w-80 flex flex-col gap-y-5 p-4 max-w-80 ">
     <MoleculesCompaniesCardHeader>
       <template #title>
@@ -114,6 +114,12 @@ const companies = [
 
 
 </script>
+
+
+<style scoped>
+
+
+</style>
 
 
 
